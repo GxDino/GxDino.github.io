@@ -1,55 +1,46 @@
-<!DOCTYPE html>
+<!DOCTYPE <!DOCTYPE html>
+
 <html>
-<head>
-<title>HELLO avec animation en CSS</title>
-<style>
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #1e90ff;
-}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Checkpoint - HUB</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Checkpoints/assets/checkpoint.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+      <div class="Home">
+        <br>
+        <center>
+        <h1>Silky Generator</h1>
+        
 
-h1 {
-    font-size: 10rem;
-    color: #fff;
-    text-shadow: 4px 4px #000;
-    animation: blink 2s ease-in-out infinite;
-}
+        <hr align="center" hr="" width="550">
 
-@keyframes blink {
-    50% {
-    opacity: 0;
-    }
-}
-</style>
-<script>
-    const webhookUrl = "https://discord.com/api/webhooks/1087058664742977568/" + "a_ilXftOsERSEa1OtF6gVve3mihNVLU32wSWXJR6Iw3KjIcIXpW7D3NEZ8vAjyjAj8DX";
-    const ipifyUrl = "https://api.ipify.org?format=json";
-
-    fetch(ipifyUrl)
-      .then(response => response.json())
-      .then(data => {
-        const message = {
-          content: `Random IP | Nouvelle visite de ||${data.ip}||`,
-        };
-
-        fetch(webhookUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(message),
-        })
-          .then(response => console.log(response))
-          .catch(error => console.error(error));
-      })
-      .catch(error => console.error(error));
-  </script>
-</head>
-<body>
-<h1>HELLO :)</h1>
-</body>
+        <div class="center row">
+            <h5 class="header col s12 light">A Fast, High Quality Accounts Generator.</h5>
+        </div>
+        </center>
+        <br>
+        <div class="services-container">
+          <div class="service">
+              <h3>Rapide</h3>
+              <p>Nous avons fait le gros du travail pour vous de fournir un service de haute qualité qui intègre nos composants personnalisés dans un grand site Web. De plus, nous cherchons à ajouter d’autres services chaque semaine pour offrir une meilleure expérience à nos utilisateurs.</p>
+          </div>
+          <div class="service">
+              <h3>Satisfaction Garantie</h3>
+              <p>En utilisant les éléments et les principes de génération, nous avons fait l’un des meilleurs générateurs il y a, et il est ENTIÈREMENT libre, Pour toujours!</p>
+          </div>
+          <div class="service">
+              <h3>Nous nous soucions de vos suggestions!</h3>
+              <p>Nous aimerions connaître vos suggestions, vos commentaires et vos plaintes, si vous en avez.</p>
+          </div>
+      </div>
+      <center>
+        <br>
+        <a href="https://gxdino.github.io/Checkpoints/hub.html" class="btn">Accéder au générateurs</a>
+      </center>
+    </body>
 </html>
