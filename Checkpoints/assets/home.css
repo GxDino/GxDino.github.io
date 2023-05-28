@@ -61,20 +61,29 @@ body {
 .services-container {
     display: flex;
 }
+
 .service {
     width: 300px;
     padding: 20px;
     margin: 20px;
     border: 1px solid #ccc;
+    transition: transform 0.3s ease;
 }
+
 .service h3 {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
 .service p {
     font-size: 14px;
     margin-bottom: 10px;
 }
+
+.service:hover {
+    transform: rotate(5deg);
+}
+
 .btn {
     display: inline-block;
     padding: 10px 20px;
