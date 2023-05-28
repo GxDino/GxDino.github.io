@@ -93,3 +93,31 @@ body {
     font-weight: bold;
     border-radius: 4px;
 }
+nav {
+    background-color: rgb(126, 169, 176, 0.1); /* Couleur de fond avec une opacité de 0.8 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+}
+nav ul li a:hover {
+    background-color: rgb(126, 169, 176, 0.2);
+    color: rgb(0, 0, 0); /* Couleur du lien lorsqu'on survole */
+}
